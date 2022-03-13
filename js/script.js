@@ -4,6 +4,12 @@ const image =[
     "img/img3.jpg"
 ]
 let imgIndex = 0;
+const img = document.getElementById("img-tag");
 setInterval(()=>{
-    
-},1000)
+    if(image.length <= imgIndex){
+        imgIndex =0;
+    }
+    const imgUrl =image[imgIndex];
+    img.setAttribute("src", imgUrl);
+    imgIndex++
+},3000)
